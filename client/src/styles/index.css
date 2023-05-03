@@ -1,65 +1,63 @@
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #root {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 body {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .header_nav_item {
-    color: rgb(var(--primary-text));
-    cursor: pointer;
-    display: flex;
-    padding: .5em;
-    margin: .7em;
+  color: rgb(var(--primary-text));
+  cursor: pointer;
+  display: flex;
+  padding: 0.5em;
+  margin: 0.7em;
 }
 
 .header_nav_btn {
-    transition: background-color ease-in-out .25s;
+  transition: background-color ease-in-out 0.25s;
 }
 
 .header_nav_btn:hover {
-    border-radius: .4em;
-    background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.7em;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .header_nav {
-    position: fixed;
+  position: fixed;
 }
 
 .horizontal {
-    border-right: solid rgba(var(--primary-text), .4) .8px;
-    width: fit-content;
-    flex-direction: row;
-    height: 100%;
-    display: none;
-}   
+  border-top: solid rgba(var(--primary-text), 0.4) 0.8px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
 
 .vertical {
-    border-right: solid rgba(var(--primary-text), .4) .8px;
-    width: fit-content;
-    height: 100%;
-    align-items: center;
-    display: none;
-    flex-direction: column;
+  border-right: solid rgba(var(--primary-text), 0.4) 0.8px;
+  width: fit-content;
+  height: 100%;
+  align-items: center;
+  display: none;
+  flex-direction: column;
 }
 
 .header_nav_bar {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .icon {
-    width: 28px;
-    height: 28px;
+  width: 29px;
+  height: 29px;
 }
 
-
 :root {
-    --primary-text: 245, 245, 245;
-    --secondary-text: 168, 168, 168;
+  --primary-text: 245, 245, 245;
+  --secondary-text: 168, 168, 168;
 }
