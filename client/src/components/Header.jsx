@@ -1,13 +1,26 @@
 import React from "react";
-import { add, home, menu, profile, notification } from "../assets/icons";
-import { instagram, instagramBlack } from "../assets/logos";
+import { add, home, menu, profile, notification, search } from "../assets/icons";
+import { instagramText, instagramBlack } from "../assets/logos";
 
 export default function Header() {
   return (
-    <main>
+    <header>
+      <TopHeader />
       <Horizontally />
       <Vertically />
-    </main>
+    </header>
+  );
+}
+
+function TopHeader() {
+  return (
+    <div className="header_top_nav fixed-top d-flex flex-row text-white d-flex d-sm-none">
+      <div>
+        <img src={instagramText} alt="home-icon" className="logo" />
+      </div>
+      <div>search</div>
+      <div></div>
+    </div>
   );
 }
 
@@ -43,6 +56,9 @@ function Vertically() {
       <div className="mt-2 header_nav_bar">
         <div className="header_nav_item header_nav_btn">
           <img src={home} alt="home-icon" className="icon" />
+        </div>
+        <div className="header_nav_item header_nav_btn">
+          <img src={search} alt="home-icon" className="icon" />
         </div>
         <div className="header_nav_item header_nav_btn">
           <img src={add} alt="add-cion" className="icon" />
