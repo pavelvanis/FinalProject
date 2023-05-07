@@ -1,14 +1,13 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router";
+import { Outlet } from "react-router";
 
-import { Header, Footer } from "../components";
+import { Header } from "../components";
 
 export default function MainLayout() {
   return (
-    <>
+    <div className="">
       <Header />
       <Outlet />
-      <Footer />
-    </>
+    </div>
   );
 }

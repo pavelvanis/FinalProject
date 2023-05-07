@@ -8,7 +8,21 @@
 
 body {
   background-color: #000000;
+  color: rgb(var(--primary-text));
 }
+
+/* Components */
+
+.icon {
+  width: 29px;
+  height: 29px;
+}
+
+.logo {
+  height: 80px;
+}
+
+/* Header */
 
 .header_nav_item {
   color: rgb(var(--primary-text));
@@ -29,6 +43,9 @@ body {
 
 .header_nav {
   position: fixed;
+  flex-grow: 0;
+  z-index: 1;
+  background-color: black;
 }
 
 .horizontal {
@@ -44,8 +61,8 @@ body {
   width: fit-content;
   height: 100%;
   align-items: center;
-  display: none;
   flex-direction: column;
+  display: none;
 }
 
 .header_nav_bar {
@@ -56,14 +73,76 @@ body {
   border-bottom: solid rgba(var(--primary-text), 0.4) 0.8px;
 }
 
-.icon {
-  width: 29px;
-  height: 29px;
+/* Main & Content*/
+
+.content {
+  flex-grow: 1;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 80px;
+main {
+  min-height: 100vh;
 }
+
+.main_content {
+  min-height: 100vh;
+  min-width: 400px;
+  background-color: rgb(108, 108, 108);
+}
+
+.ao {
+  width: 80%;
+}
+
+@media only screen and (min-width: 576px) {
+  .content {
+    margin-left: 70px;
+  }
+
+  /*   main {
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(71, 71, 71);
+  } */
+}
+
+.home {
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* SideBar */
+
+.aside {
+  max-width: 400px;
+  min-width: fit-content;
+  background-color: rgb(94, 94, 94);
+}
+
+/* Story */
+
+.story {
+  border: solid 2px white;
+  border-radius: 100%;
+  width: 60px;
+}
+
+.story_bar {
+  height: 100px;
+  padding: 1em;
+  background-color: rgb(110, 110, 110);
+}
+
+
+/* Footer */
+
+footer {
+  min-height: 100px;
+  background-color: rgb(52, 52, 52);
+}
+
 
 :root {
   --primary-text: 245, 245, 245;
