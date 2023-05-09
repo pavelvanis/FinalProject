@@ -1,11 +1,11 @@
 import React from "react";
-import { Footer, LoginContainer } from "../components";
+import { Footer } from "../components";
+import { Login } from "../components/Auth";
 
 export default function LoginPage() {
   return (
-    <div className="d-flex flex-column align-items-center min-vh-100">
-      <LoginContainer />
-      <Footer />
+    <div className="d-flex align-items-center justify-content-center min-vh-100">
+      <Login />
     </div>
   );
 }
