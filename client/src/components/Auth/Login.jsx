@@ -2,9 +2,10 @@ import React, { useRef, useState } from "react";
 import { Alert, Card, Form, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/UserAuth";
+import Logout from "./Logout";
 
 export default function Login() {
-  const { login } = useAuth();
+  const { login, currentUser } = useAuth();
   const navigate = useNavigate();
 
   const [error, setError] = useState(false);
@@ -20,7 +21,7 @@ export default function Login() {
       await login(emailRef.current.value, passwordRef.current.value);
       setLoading(true);
       setError(false);
-      navigate("/")
+      navigate("/");
     } catch {
       setError("Failed to login");
     }
@@ -29,7 +30,7 @@ export default function Login() {
 
   return (
     <div className="d-flex align-items-center justify-content-center min-vh-100">
-      <Card style={{ minWidth: 300 }}>
+      <Card style={{ minWidth: 300 }} >
         <Card.Body>
           <h2 className="mb-3">Login</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -52,7 +53,8 @@ export default function Login() {
           </Form>
         </Card.Body>
         <div className="w-100 text-center my-1 mb-3">
-          <Link to="/signup">Register</Link>
+          <span>Do you want to </span>
+          <Link to="/signup">Register</Link> ?
         </div>
       </Card>
     </div>

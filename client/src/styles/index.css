@@ -6,11 +6,6 @@
   min-height: 100vh;
 }
 
-body {
-  background-color: #000000;
-  color: rgb(var(--primary-text));
-}
-
 /* Components */
 
 .icon {
@@ -38,14 +33,12 @@ body {
 
 .header_nav_btn:hover {
   border-radius: 0.7em;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .header_nav {
   position: fixed;
   flex-grow: 0;
   z-index: 1;
-  background-color: black;
 }
 
 .horizontal {
@@ -87,7 +80,6 @@ main {
 .main_content {
   min-height: 100vh;
   min-width: 400px;
-  background-color: rgb(108, 108, 108);
 }
 
 .ao {

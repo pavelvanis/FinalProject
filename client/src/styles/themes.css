@@ -1,0 +1,30 @@
+
+
+:root {
+    --body-background:#ffffff;
+    --body-color: #000000;
+}
+
+[data-theme="dark"] {
+    --body-background: #000000;
+    --body-color: #ffffff;
+
+}
+
+body {
+    transition: all .3s ease-in-out;
+    background-color: var(--body-background);
+    color: var(--body-color);
+}
+
+#theme-switch + [data-theme="dark"] {
+    color: white;
+}
+
+#theme-switch[data-theme="light"] {
+    color: black;
+}
+
+#theme-switch {
+    cursor: pointer;
+}
